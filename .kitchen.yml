@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: debian8_local
+    driver:
+        box: debian8_local
+
+suites:
+  - name: default
+    run_list:
+      - recipe[lamp_smf::default]
+    attributes:
+    driver:
+      network:
+        - [ 'forwarded_port', { guest: 80, host: 8080 } ]
+        - [ 'forwarded_port', { guest: 443, host: 8443 } ]

@@ -1,2 +1,4 @@
-# chef-lamp_dmf
-Simple chef cookbook to instal the LAMP stack and the SimpleMachinesForum
+# chef-lamp_smf
+
+TODO: Enter the cookbook description here.
+
